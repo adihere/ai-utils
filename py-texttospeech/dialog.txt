@@ -1,0 +1,12 @@
+A Recap of the 2018 DevOps Enterprise Summit
+Welcome back to the show, everyone. We're here today to talk about the biggest takeaways from the 2018 DevOps Enterprise Summit in Las Vegas.
+Absolutely, it was a whirlwind of information, insights, and inspiration. I'm still processing it all. Let's start with the common themes that seemed to permeate many of the talks.
+One thing that really stood out to me was the emphasis on the human element. Whether it was about fostering a culture of learning or bridging the chasm between different teams, there was a clear understanding that technology is only one piece of the puzzle.
+That's so true. We heard from several speakers about the importance of empathy and the need to build trust and collaboration within organisations. Josh Atwell's talk on "being the right person for DevOps" really resonated with me. He stressed the importance of communication and active listening to understand each other's perspectives.
+Yes, and that ties in nicely with Jaclyn Damiano's powerful call to action for making women visible in tech. She highlighted the "confidence gap" and how we need to encourage women to step up, share their stories, and take on leadership roles.
+Speaking of leadership, there was a lot of discussion about the role of leadership in driving digital transformation. We heard from folks at Nationwide and Walmart who talked about how strong leadership support was essential for overcoming resistance and creating an environment where DevOps could thrive.
+Absolutely, and that transformation often requires a shift in mindset, moving away from traditional siloed approaches and embracing a more holistic view of the software delivery lifecycle.
+And it's not just about changing processes, it's about changing the way we think about work itself. We heard about the importance of measuring what matters, focusing on outcomes rather than outputs, and using data to drive continuous improvement.
+Right, and automation played a big role in many of those conversations. From infrastructure automation to continuous delivery pipelines, it's clear that automation is key to freeing up teams to focus on higher-value work.
+It was also interesting to see how DevOps principles are being applied to different domains, from mainframe systems to finance. It really shows how wide-reaching the impact of DevOps can be.
+Overall, I think the summit was a great reminder that DevOps is more than just a set of tools or practices. It's a culture of collaboration, continuous learning, and a relentless pursuit of improvement.

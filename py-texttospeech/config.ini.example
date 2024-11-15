@@ -1,0 +1,6 @@
+[openai]
+api_key = your_openai_api_key
+
+[files]
+dialogue_path = path/to/your/dialogue.txt
+audio_file_path = path/to/save/your/audio/output
