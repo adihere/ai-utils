@@ -6,7 +6,7 @@ from pydub.playback import play
 
 # Read the configuration file
 config = configparser.ConfigParser()
-config.read('config.ini')
+config.read('py-texttospeech/config.ini')
 
 openai.api_key = config.get('openai','api_key')
 
