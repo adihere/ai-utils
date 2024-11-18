@@ -1,0 +1,1 @@
+ffmpeg -loop 1 -i bkgd.png -i audio.mp3 -acodec copy -vcodec libx264 -shortest does2018.mp4
