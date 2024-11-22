@@ -1,5 +1,5 @@
 import configparser
-import openai
+import openai,os
 from pydub import AudioSegment
 from pydub.playback import play
 
@@ -11,8 +11,10 @@ config.read('py-texttospeech/config.ini')
 openai.api_key = config.get('openai','api_key')
 
 
-dialogue_path = config['files']['dialogue_path']
-audio_base_path = config['files']['audio_file_path']
+##dialogue_path = os.path.join(config['files']['dialogue_path']) 
+##audio_base_path = os.path.join(config['files']['audio_file_path'])
+dialogue_path = os.path.abspath(config['files']['dialogue_path']) 
+audio_base_path = os.path.abspath(config['files']['audio_file_path'])
 
 
 def text_to_speech(text, voice):
@@ -23,7 +25,7 @@ def text_to_speech(text, voice):
             input=text
         )
         audio_content = response['audio_content']
-        audio_file_path = f"{audio_base_path}/output_{voice}.mp3"
+        audio_file_path = f"{audio_base_path}\output_{voice}.mp3"
 
         with open(audio_file_path, "wb") as audio_file:
             audio_file.write(audio_content)
@@ -44,8 +46,14 @@ def read_dialogue_file(file_path):
 
 
 if __name__ == "__main__":
+
     # Read the text file
-    dialogue = read_dialogue_file(dialogue_path)
+    try: 
+        # Read the text file 
+        dialogue = read_dialogue_file(dialogue_path) 
+    except Exception as e: 
+        print(f"An error occurred while reading the dialogue file: {e}") 
+        dialogue = []
 
     # Simulate conversation using different voices
     voices = ["nova", "onyx"]
