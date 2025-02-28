@@ -1,4 +1,5 @@
-Production-Grade Implementation Requirements
+##Production-Grade Implementation Requirements for nodjes projects
+(A Few points are opinionated)
 
 Use Turborepo monorepo structure with separate apps (Next.js/NestJS) and shared packages (UI/utils)
 
