@@ -1,32 +1,32 @@
-##Production-Grade Implementation Requirements for nodjes projects
+## Production-Grade Implementation Requirements for Node.js Projects
 (A Few points are opinionated)
 
-Use Turborepo monorepo structure with separate apps (Next.js/NestJS) and shared packages (UI/utils)
+1. Use Turborepo monorepo structure with separate `apps` (Next.js/NestJS) and shared `packages` (UI/utils)
 
-Enforce Node.js LTS version with .nvmrc + engine-strict in .npmrc
+2. Enforce Node.js LTS version with `.nvmrc` + `engine-strict` in `.npmrc`
 
-Implement layered logging (debug/info/error) with correlation IDs and environment toggle
+3. Implement layered logging (debug/info/error) with correlation IDs and environment toggle
 
-Write JSDoc comments for all complex functions including params, returns, and error cases
+4. Write JSDoc comments for all complex functions including params, returns, and error cases
 
-Achieve 80%+ test coverage with Jest/Testing Library, including edge cases
+5. Achieve 80%+ test coverage with Jest/Testing Library, including edge cases
 
-Validate all user inputs and API responses with Zod schemas
+6. Validate all user inputs and API responses with Zod schemas
 
-Use exact package versions (package-lock.json) and audit dependencies weekly
+7. Use exact package versions (`package-lock.json`) and audit dependencies weekly
 
-Add healthcheck endpoints (/_health) with DB connection tests
+8. Add healthcheck endpoints (`/_health`) with DB connection tests
 
-Document key architectural decisions in ADRs (Architecture Decision Records)
+9. Document key architectural decisions in ADRs (Architecture Decision Records)
 
-Configure CI/CD pipeline with lint-test-build-deploy stages
+10. Configure CI/CD pipeline with lint-test-build-deploy stages
 
-Implement proper error handling with contextual messages (no console.error raw)
+11. Implement proper error handling with contextual messages (no `console.error` raw)
 
-Use environment variables for secrets with validation on app startup
+12. Use environment variables for secrets with validation on app startup
 
-Add performance metrics (response times, memory usage)
+13. Add performance metrics (response times, memory usage)
 
-Follow RESTful practices for APIs: proper status codes, versioning, and pagination
+14. Follow RESTful practices for APIs: proper status codes, versioning, and pagination
 
-Include // TODO-AI comments where human review is critical
+15. Include `// TODO-AI` comments where human review is critical
