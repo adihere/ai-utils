@@ -22,4 +22,3 @@ When improving this prompt, do each step inside  tags so we can audit your reaso
 ```
 
 ---
-Answer from Perplexity: pplx.ai/share
