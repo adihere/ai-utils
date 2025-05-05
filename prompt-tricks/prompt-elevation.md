@@ -14,9 +14,8 @@ To do this, when looking at a prompt, you start by thinking deeply for at least 
 Finally, you think deeply about what you've done, identify (and re-implement) if anything could be done better, and construct a final, far more effective and concise prompt.
 
 ## Prompt to Improve
-```
+
 {PLACE_YOUR_PROMPT_HERE}
-```
 
 When improving this prompt, do each step inside  tags so we can audit your reasoning.
 ```
