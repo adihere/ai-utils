@@ -1,0 +1,149 @@
+Create a full-stack web application with modern frontend and Node.js backend following enterprise-grade best practices:
+
+## Frontend Architecture
+- Build a modern single-page application using component-based architecture
+- Implement proper component structure with separation of concerns
+- Use state management solution for application state
+- Add client-side routing for navigation
+- Include modern CSS framework for styling
+- Create reusable components following DRY principles
+- Implement proper error boundaries and loading states
+- Support responsive design and accessibility standards
+
+## Backend (Node.js/Express)
+- Use Node.js LTS version (enforce in package.json engines field)
+- Implement layered architecture: routes → controllers → services → data access
+
+## Node.js Version Enforcement
+```
+{
+  "engines": {
+    "node": ">=18.0.0 =8.0.0"
+  }
+}
+```
+
+## Layered Logging System
+- Implement structured logging with multiple levels (debug, info, warn, error)[3]
+- Create custom Logger class with service-specific instances
+- Add request logging middleware with correlation IDs
+- Include stack trace logging for debugging environments
+- Configure different log outputs for development/production
+- Use JSON format for production logs to enable log aggregation[3]
+
+## Documentation Standards
+- Add comprehensive JSDoc comments for all functions[4]
+- Document parameters with types and descriptions
+- Include @returns documentation with type information
+- Document @throws for error cases
+- Example format:
+```
+/**
+ * Retrieves user by ID with comprehensive error handling
+ * @param {string} userId - The unique identifier for the user
+ * @param {Object} options - Configuration options
+ * @param {boolean} options.includeProfile - Whether to include user profile
+ * @returns {Promise} User object with profile data
+ * @throws {Api404Error} When user is not found
+ * @throws {ValidationError} When userId format is invalid
+ */
+```
+
+## Health Check Implementation
+- Create /_health endpoint returning JSON status[5]
+- Test database connection and critical dependencies in health check
+- Include system information (uptime, memory usage, Node.js version)
+- Return proper HTTP status codes (200 for healthy, 503 for unhealthy)[5]
+- Add dependency checks for external services (Redis, third-party APIs)
+- Keep health checks lightweight and fast to avoid system strain[5]
+- Differentiate between critical and non-critical dependencies[5]
+
+## Error Handling Architecture
+- Create BaseError class extending Error with statusCode and isOperational properties[6]
+- Implement specific error classes: Api404Error, ValidationError, DatabaseError
+- Add centralized error handling middleware
+- Use async/await with try-catch blocks throughout asynchronous operations[6]
+- Include contextual error messages with request correlation IDs
+- Implement proper error logging and user-friendly responses
+- Handle uncaught exceptions and unhandled promise rejections[6]
+
+## Environment Variables Management
+- Create .env.example file with all required variables[2]
+- Implement startup validation for required environment variables
+- Use dotenv for environment variable loading
+- Validate format and presence of: DATABASE_URL, JWT_SECRET, PORT, NODE_ENV
+- Create config module that validates and exports typed configuration
+- Store sensitive information like API keys and database credentials securely[2]
+
+## RESTful API Design
+- Implement proper HTTP methods (GET, POST, PUT, DELETE)
+- Use appropriate status codes (200, 201, 400, 404, 500)
+- Add API versioning (/api/v1/)
+- Implement pagination with limit/offset or cursor-based approaches
+- Include proper response formatting with data/error/meta structure
+- Add comprehensive request/response validation
+- Follow REST conventions for resource naming and operations
+
+## Security Implementation
+- Add security headers middleware for protection
+- Implement rate limiting to prevent abuse
+- Add comprehensive input validation and sanitization
+- Use secure password hashing algorithms
+- Implement proper authentication and session management
+- Add CORS configuration for cross-origin requests
+- Validate and sanitize all user inputs to prevent injection attacks
+- Implement protection against common vulnerabilities (XSS, CSRF, SQL injection)
+
+## Architecture & Code Organization
+```
+/src
+  /components (Frontend components)
+  /views (Frontend pages/views)
+  /stores (State management)
+  /services (API communication layer)
+  /utils (Frontend utilities)
+/server
+  /routes (Express route definitions)
+  /controllers (Request handlers and response formatting)
+  /services (Business logic layer)
+  /models (Data access layer)
+  /middleware (Custom middleware functions)
+  /utils (Server utilities and helpers)
+  /config (Configuration management)
+```
+
+## Database Integration
+- Use modern ORM for type-safe database operations
+- Implement proper connection pooling and management
+- Add database migrations for schema versioning
+- Include seed data for development environment
+- Implement proper transaction handling for data consistency
+- Add database health monitoring
+
+## Dependency Management
+- Ensure all dependencies are up to date and vulnerability-free[2]
+- Use npm audit for security scanning
+- Regularly clean node_modules cache to avoid stale dependencies[2]
+- Monitor and update dependencies to mitigate security risks[2]
+
+## Additional Requirements
+- Add comprehensive error logging with contextual information
+- Implement request correlation IDs for tracing
+- Create middleware for authentication and authorization
+- Add input validation schemas with detailed error messages
+- Include API documentation with interactive interface
+- Implement graceful shutdown handling for production deployment
+- Add comprehensive testing setup (unit, integration, e2e)
+- Configure code quality tools (linting, formatting, type checking)
+- Implement automated health checks and monitoring[5]
+- Add performance monitoring and metrics collection
+
+## Production Readiness
+- Configure proper logging for production environments
+- Implement monitoring and alerting systems
+- Add deployment configuration and CI/CD pipeline setup
+- Include Docker configuration for containerization
+- Set up environment-specific configurations
+- Implement backup and recovery procedures
+
+Generate a complete application structure with all these practices implemented, including example endpoints, comprehensive error handling, structured logging, security measures, and production-ready configurations.
