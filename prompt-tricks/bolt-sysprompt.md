@@ -32,7 +32,7 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Use JSON format for production logs to enable log aggregation
 
 ## Documentation Standards
-- Add comprehensive JSDoc comments for all functions[4]
+- Add comprehensive JSDoc comments for all functions
 - Document parameters with types and descriptions
 - Include @returns documentation with type information
 - Document @throws for error cases
@@ -50,7 +50,7 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 ```
 
 ## Health Check Implementation
-- Create /_health endpoint returning JSON status[5]
+- Create /_health endpoint returning JSON status
 - Test database connection and critical dependencies in health check
 - Include system information (uptime, memory usage, Node.js version)
 - Return proper HTTP status codes (200 for healthy, 503 for unhealthy)
@@ -71,7 +71,6 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Create .env.example file with all required variables
 - Implement startup validation for required environment variables
 - Use dotenv for environment variable loading
-- Validate format and presence of: DATABASE_URL, JWT_SECRET, PORT, NODE_ENV
 - Create config module that validates and exports typed configuration
 - Store sensitive information like API keys and database credentials securely
 
@@ -125,24 +124,5 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Regularly clean node_modules cache to avoid stale dependencies
 - Monitor and update dependencies to mitigate security risks
 
-## Additional Requirements
-- Add comprehensive error logging with contextual information
-- Implement request correlation IDs for tracing
-- Create middleware for authentication and authorization
-- Add input validation schemas with detailed error messages
-- Include API documentation with interactive interface
-- Implement graceful shutdown handling for production deployment
-- Add comprehensive testing setup (unit, integration, e2e)
-- Configure code quality tools (linting, formatting, type checking)
-- Implement automated health checks and monitoring
-- Add performance monitoring and metrics collection
-
-## Production Readiness
-- Configure proper logging for production environments
-- Implement monitoring and alerting systems
-- Add deployment configuration and CI/CD pipeline setup
-- Include Docker configuration for containerization
-- Set up environment-specific configurations
-- Implement backup and recovery procedures
 
 Generate a complete application structure with all these practices implemented, including example endpoints, comprehensive error handling, structured logging, security measures, and production-ready configurations.
