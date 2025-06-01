@@ -10,18 +10,10 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Implement proper error boundaries and loading states
 - Support responsive design and accessibility standards
 
-## Backend (Node.js/Express)
+## Backend
 - Use Node.js LTS version (enforce in package.json engines field)
 - Implement layered architecture: routes → controllers → services → data access
 
-## Node.js Version Enforcement
-```
-{
-  "engines": {
-    "node": ">=18.0.0 =8.0.0"
-  }
-}
-```
 
 ## Layered Logging System
 - Implement structured logging with multiple levels (debug, info, warn, error)
@@ -125,4 +117,13 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Monitor and update dependencies to mitigate security risks
 
 
+##Supabase Setup and Configuration
+- Create a new Supabase project and configure environment variables in Bolt.new
+- Set up database connection using Supabase client with proper authentication
+- Configure Row-Level Security (RLS) policies for data protection and user-specific access
+- Enable real-time subscriptions for live data synchronization across devices
+- Implement Supabase Auth integration for seamless user authentication
+
+
 Generate a complete application structure with all these practices implemented, including example endpoints, comprehensive error handling, structured logging, security measures, and production-ready configurations.
+
