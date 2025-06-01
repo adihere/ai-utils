@@ -24,12 +24,12 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 ```
 
 ## Layered Logging System
-- Implement structured logging with multiple levels (debug, info, warn, error)[3]
+- Implement structured logging with multiple levels (debug, info, warn, error)
 - Create custom Logger class with service-specific instances
 - Add request logging middleware with correlation IDs
 - Include stack trace logging for debugging environments
 - Configure different log outputs for development/production
-- Use JSON format for production logs to enable log aggregation[3]
+- Use JSON format for production logs to enable log aggregation
 
 ## Documentation Standards
 - Add comprehensive JSDoc comments for all functions[4]
@@ -53,27 +53,27 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Create /_health endpoint returning JSON status[5]
 - Test database connection and critical dependencies in health check
 - Include system information (uptime, memory usage, Node.js version)
-- Return proper HTTP status codes (200 for healthy, 503 for unhealthy)[5]
-- Add dependency checks for external services (Redis, third-party APIs)
-- Keep health checks lightweight and fast to avoid system strain[5]
-- Differentiate between critical and non-critical dependencies[5]
+- Return proper HTTP status codes (200 for healthy, 503 for unhealthy)
+- Add dependency checks for external services (Redis,supabase, google api,  third-party APIs)
+- Keep health checks lightweight and fast to avoid system strain
+- Differentiate between critical and non-critical dependencies
 
 ## Error Handling Architecture
-- Create BaseError class extending Error with statusCode and isOperational properties[6]
+- Create BaseError class extending Error with statusCode and isOperational properties
 - Implement specific error classes: Api404Error, ValidationError, DatabaseError
 - Add centralized error handling middleware
-- Use async/await with try-catch blocks throughout asynchronous operations[6]
+- Use async/await with try-catch blocks throughout asynchronous operations
 - Include contextual error messages with request correlation IDs
 - Implement proper error logging and user-friendly responses
-- Handle uncaught exceptions and unhandled promise rejections[6]
+- Handle uncaught exceptions and unhandled promise rejections
 
 ## Environment Variables Management
-- Create .env.example file with all required variables[2]
+- Create .env.example file with all required variables
 - Implement startup validation for required environment variables
 - Use dotenv for environment variable loading
 - Validate format and presence of: DATABASE_URL, JWT_SECRET, PORT, NODE_ENV
 - Create config module that validates and exports typed configuration
-- Store sensitive information like API keys and database credentials securely[2]
+- Store sensitive information like API keys and database credentials securely
 
 ## RESTful API Design
 - Implement proper HTTP methods (GET, POST, PUT, DELETE)
@@ -95,7 +95,6 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Implement protection against common vulnerabilities (XSS, CSRF, SQL injection)
 
 ## Architecture & Code Organization
-```
 /src
   /components (Frontend components)
   /views (Frontend pages/views)
@@ -121,10 +120,10 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Add database health monitoring
 
 ## Dependency Management
-- Ensure all dependencies are up to date and vulnerability-free[2]
+- Ensure all dependencies are up to date and vulnerability-free
 - Use npm audit for security scanning
-- Regularly clean node_modules cache to avoid stale dependencies[2]
-- Monitor and update dependencies to mitigate security risks[2]
+- Regularly clean node_modules cache to avoid stale dependencies
+- Monitor and update dependencies to mitigate security risks
 
 ## Additional Requirements
 - Add comprehensive error logging with contextual information
@@ -135,7 +134,7 @@ Create a full-stack web application with modern frontend and Node.js backend fol
 - Implement graceful shutdown handling for production deployment
 - Add comprehensive testing setup (unit, integration, e2e)
 - Configure code quality tools (linting, formatting, type checking)
-- Implement automated health checks and monitoring[5]
+- Implement automated health checks and monitoring
 - Add performance monitoring and metrics collection
 
 ## Production Readiness
